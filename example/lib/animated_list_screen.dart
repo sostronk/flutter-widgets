@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/tilt_animated_list.dart';
+import 'package:flutter_widgets/animated_reorder_list.dart';
 
 class AnimatedListScreen extends StatefulWidget {
   const AnimatedListScreen({super.key});
@@ -43,10 +43,10 @@ class _AnimatedListScreenState extends State<AnimatedListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tilt Animated List'),
+        title: const Text('Animated Reorder List'),
       ),
-      body: TiltAnimatedList(
-        key: const ValueKey('tiltAnimatedList'),
+      body: AnimatedReorderList(
+        key: const ValueKey('animatedReorderList'),
         keyingFunction: (item) => item.key!,
         items: users,
         duration: const Duration(milliseconds: 600),

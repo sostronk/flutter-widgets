@@ -1,8 +1,8 @@
 import 'package:diffutil_dart/diffutil.dart';
 import 'package:flutter/material.dart';
 
-class TiltAnimatedList<T> extends StatefulWidget {
-  const TiltAnimatedList({
+class AnimatedReorderList<T> extends StatefulWidget {
+  const AnimatedReorderList({
     super.key,
     required this.items,
     required this.itemBuilder,
@@ -30,10 +30,10 @@ class TiltAnimatedList<T> extends StatefulWidget {
   final Duration duration;
 
   @override
-  State<TiltAnimatedList<T>> createState() => _TiltAnimatedListState<T>();
+  State<AnimatedReorderList<T>> createState() => _AnimatedReorderListState<T>();
 }
 
-class _TiltAnimatedListState<T> extends State<TiltAnimatedList<T>>
+class _AnimatedReorderListState<T> extends State<AnimatedReorderList<T>>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late List<T> localItems;
@@ -48,7 +48,7 @@ class _TiltAnimatedListState<T> extends State<TiltAnimatedList<T>>
   }
 
   @override
-  void didUpdateWidget(TiltAnimatedList<T> oldWidget) {
+  void didUpdateWidget(AnimatedReorderList<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
     final List<Key> oldKeys =
         oldWidget.items.map((T e) => oldWidget.keyingFunction(e)).toList();

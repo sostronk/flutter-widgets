@@ -26,7 +26,7 @@ Above snippet will give following output
 
 ## Skewed TabBar
 
-As the name suggests Skewed TabBar allows you to create a tab bar with skews
+As the name suggests Skewed TabBar allows you to create a tab bar with skews. This can be an alternative different from the usual tab bar.
 
 #### Usage 📝
 
@@ -64,15 +64,15 @@ Above snippet will give following output
   <img src="assets/skewed_tab_bar.gif" />
 </p>
 
-## Tilt Animated List
+## Animated Reorder List
 
 As the name suggests Skewed TabBar allows you to create a tab bar with skews
 
 #### Usage 📝
 
 ```dart
-TiltAnimatedList(
-        key: const ValueKey('tiltAnimatedList'),
+AnimatedReorderList(
+        key: const ValueKey('animatedReorderList'),
         keyingFunction: (item) => item.key!,
         items: users,
         duration: const Duration(milliseconds: 600),
@@ -89,7 +89,7 @@ TiltAnimatedList(
         ),
       )
 ```
-When the indexing of list items updates,
+When the order of list items updates, AnimatedReorderList will auto animate the reorder
 
 ```dart
   final tmpListp = List<Widget>.from(users);
@@ -105,7 +105,6 @@ When the indexing of list items updates,
           debugPrint('\nusers>> after:\n$users');
         });
 ```
-TiltAnimatedList will animate and adjust the indexing
 
 <p align="center">
   <img src="assets/animated_list.gif" />
